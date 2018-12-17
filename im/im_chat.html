@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
 		<link rel="stylesheet" href="../css/chat.css" />
 		<link rel="stylesheet" href="../css/iconfont.css" />
-		
+
 		<!--App自定义的css-->
 		<link rel="stylesheet" type="text/css" href="../css/app.css" />
 
@@ -104,13 +104,31 @@
 		</div>
 		<div id='messageBar' class="myapp-message-bar">
 			<div class="myapp-message-input-div">
-				<textarea id="messageTv" rows="1" placeholder="请输入"></textarea>
-				<button id="messageSendBtn" type="button" class="mui-btn myapp-btn-send" >发送</button>
+				<textarea id="messageTv" rows="1" style="width: 70%;height: auto;"></textarea>
+				<img id="message_tool_emoji" src="../images/emoji.png" style="max-width: 30px;height: auto;">
+				<img id="message_tool_moudel" src="../images/moudel.png" style="max-width: 30px;height: auto;">
+				<img id="message_tool_more" src="../images/more.png" style="max-width: 30px;height: auto;">
+				<button id="messageSendBtn" type="button" class="mui-btn myapp-btn-send mui-hidden">发送</button>
 			</div>
-			<div class="myapp-message-tool-div">
-				<i id="message_tool_emoji" class="mui-icon iconfont icon-biaoqing"></i>
+			<div class="myapp-message-tool-div mui-hidden">
 				<input id="messageCameraInp" type="file" accept="image/*" capture="camera" hidden="hidden">
 				<i id="message_icon_camera" class="mui-icon iconfont icon-xiangji"></i>
+				<div class="borderApp">
+					<p>
+					<svg class="icon" style="width: 2.5em;height: 3.5em;" aria-hidden="true">
+						<use xlink:href="#icon-xiangce"></use>
+					</svg>
+					</p>
+					<span style="font-size: 10px;text-align: center;">相册</span>
+				</div>
+				<div class="borderApp">
+					<p>
+					<svg class="icon" style="width: 2.5em;height: 3.5em;" aria-hidden="true">
+						<use xlink:href="#icon-kaoqinguanli-"></use>
+					</svg>
+					</p>
+					<span style="font-size: 10px;text-align: center;">拍摄</span>
+				</div>
 				<input id="messagePhotoInp" type="file" accept="image/*" hidden="hidden" />
 				<i id="message_icon_photo" class="mui-icon iconfont icon-tupian"></i>
 				<i></i>
@@ -161,15 +179,28 @@
 	<script src="../js/jquery-1.11.3.min.js"></script>
 	<script src="../js/mui.zoom.js"></script>
 	<script src="../js/mui.previewimage.js"></script>
-	
+	<script src="../fonts/iconfont.js"></script>
+
 	<script>
 		mui.ready(function() {
 
 			/***
 			 * 禁用回车换行符
 			 */
+			document.getElementById('#message_tool_more').addEventListener('tap', function() {
+				alert("我被点击 了");
+			})
 			var messageTv = document.getElementById("messageTv");
-			messageTv.onkeydown = function(e) {
+			messageTv.onkeyup = function(e) {
+				//alert("获得焦点");
+				if (messageTv.value != "") {
+					document.getElementById("message_tool_more").classList.add('mui-hidden');
+					document.getElementById("messageSendBtn").classList.remove('mui-hidden');
+				} else {
+					document.getElementById("message_tool_more").classList.remove('mui-hidden');
+					document.getElementById("messageSendBtn").classList.add('mui-hidden');
+				}
+
 				send(e);
 			}
 
