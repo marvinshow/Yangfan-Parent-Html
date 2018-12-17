@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="../default.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">动态</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="#">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">通知</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="#">
+				<span class="mui-icon mui-icon-plus-filled"></span>
+			</a>
+
+			<a class="mui-tab-item" href="../im/im_chat.html">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">找老师</span>
+			</a>
+			<a class="mui-tab-item" href="../my/my.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+
+		<div class="mui-content">
+			<div class="title">
+				<div class="hb-notice-tag">
+					<span>2018-12-14 11:53</span>
+				</div>
+			</div>
+			<div class="mui-card">
+				<a href="notice_content.html">
+					<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(../images/cbd.jpg)"></div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">
+							<p class="hb-notice-title">明天入园需自备热水杯</p>
+							<p class="hb-notice-content">这里显示文章摘要，让读者对文章内容有个粗略的概念...</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="title">
+				<div class="hb-notice-tag">
+					<span>2018-11-09 17:56</span>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(../images/muwu.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p class="hb-notice-title">学平险费用已经出来了，请抓紧交纳</p>
+						<p class="hb-notice-content">国家规定法定育龄儿童都有义务交纳学平险...</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mui-index-bottom">
+				——我是有底线的——
+			</div>
+		</div>
+
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script>
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+	</script>
+</html>

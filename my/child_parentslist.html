@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">家长列表</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+
+				<ul class="mui-table-view">
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>姓名</label>
+						<label>于晓明</label>
+					</div>
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>关系</label>
+						<label>爸爸</label>
+					</div>
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>联系方式</label>
+						<label>18653253325</label>
+					</div>
+				</ul>
+				<ul class="mui-table-view">
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>姓名</label>
+						<label>李晓斐</label>
+					</div>
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>关系</label>
+						<label>妈妈</label>
+					</div>
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>联系方式</label>
+						<label>18669867782</label>
+					</div>
+				</ul>
+
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui(this).button('loading');
+			setTimeout(function() {
+				mui(this).button('reset');
+			}.bind(this), 2000);
+		});
+		
+		var info = document.getElementById("disease");
+		document.getElementById("alertBtn").addEventListener('tap', function() {
+			mui.alert('尚未填写孩子的既往病史或过敏药物', '', function() {
+				info.value = '你刚关闭了警告框';
+			});
+		});
+	</script>
+
+</html>

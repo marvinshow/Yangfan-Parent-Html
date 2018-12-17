@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">消息</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<div class="hb-message-item">
+						<a href="javascript:;">
+							<div class="mui-media-body hb-message-info">
+								<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+								<p class="hb-message-author">王紫萱的妈妈</p>
+								<p class="hb-message-content">拍得好漂亮啊</p>
+								<p class="hb-message-date">21小时前</p>
+							</div>
+							<div><img class="hb-message-rightpic" src="../images/girl_b.png"></div>
+						</a>
+					</div>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<div class="hb-message-item">
+						<a href="javascript:;">
+							<div class="mui-media-body hb-message-info">
+								<img class="mui-media-object mui-pull-left" src="../images/muwu.jpg">
+								<p class="hb-message-author">杨伟博的爸爸</p>
+								<p class="hb-message-content">我儿子在哪里</p>
+								<p class="hb-message-date">昨天 15:36</p>
+							</div>
+							<div><img class="hb-message-rightpic" src="../images/girl_b.png"></div>
+						</a>
+					</div>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<div class="hb-message-item">
+						<a href="javascript:;">
+							<div class="mui-media-body hb-message-info">
+								<img class="mui-media-object mui-pull-left" src="../images/muwu.jpg">
+								<p class="hb-message-author">陈意涵的妈妈</p>
+								<p class="hb-message-content">烤炉模式的城，到黄昏，如同打翻的调色盘一般</p>
+								<p class="hb-message-date">12-12 08:09</p>
+							</div>
+							<div><img class="hb-message-rightpic" src="../images/girl_b.png"></div>
+						</a>
+					</div>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<div class="hb-message-item">
+						<a href="javascript:;">
+							<div class="mui-media-body hb-message-info">
+								<img class="mui-media-object mui-pull-left" src="../images/yuantiao.jpg">
+								<p class="hb-message-author">陈蓉的爷爷</p>
+								<p class="hb-message-content">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖</p>
+								<p class="hb-message-date">1年前</p>
+							</div>
+							<div><img class="hb-message-rightpic" src="../images/girl_b.png"></div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+	</script>
+</html>

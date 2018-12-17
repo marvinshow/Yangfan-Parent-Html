@@ -1,0 +1,283 @@
+/*去除下划线*/
+
+* {
+	-webkit-user-select: auto;
+}
+
+.mui-table-view:before {
+	height: 0px;
+}
+
+.mui-table-view:after {
+	height: 0px;
+}
+
+.mui-table-view-cell:after {
+	height: 0px;
+}
+
+ul,
+menu,
+dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 5em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+
+
+li {
+	display: block;
+	text-align: -webkit-match-parent;
+}
+/*表情面板弹出时*/
+.myapp-chat-row-emoji{
+	-webkit-margin-after: 15em;
+}
+
+.myapp-chat-row li {
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.myapp-chat-row-left {
+	padding-left: 10px;
+}
+
+.myapp-chat-row-left>div {
+	float: left;
+}
+
+.myapp-chat-row-right {
+	padding-right: 10px;
+}
+
+.myapp-chat-row-right>div {
+	float: right;
+}
+
+.myapp-chat-row-left>div:nth-child(2) {
+	max-width: 80%;
+	position: relative;
+	padding-right: 50px;
+	left: 20px;
+}
+
+.myapp-chat-row-right>div:nth-child(2) {
+	max-width: 80%;
+	position: relative;
+	padding-left: 50px;
+	right: 20px;
+}
+
+
+/*头像*/
+
+.myapp-user-head {
+	width: 40px;
+	height: 40px;
+}
+
+
+/*文字消息*/
+
+ul li span {
+	display: inline-block;
+	padding: 15px;
+	font: 16px/20px , sans-serif;
+	border-radius: 10px;
+}
+
+ul li span:after {
+	position: absolute;
+	top: 15px;
+	content: '';
+	width: 0;
+	height: 0;
+}
+
+.myapp-chat-row-left span {
+	background-color:#fff;
+	border-left: 15px solid transparent;
+}
+
+.myapp-chat-row-right span {
+	background-color:#8dfa69
+}
+
+.myapp-chat-row-left span:after {
+	border-top: 15px solid #fff;
+	border-left: 15px solid transparent;
+	left: -15px;
+}
+
+.myapp-chat-row-right span:after {
+	border-top: 15px solid #8dfa69;
+	border-right: 15px solid transparent;
+	right: -15px;
+}
+
+
+/*图片消息*/
+
+.myapp-message-img {
+	max-width: 100%;
+	height: auto;
+	border: solid 1px #CCCCCC;
+}
+
+.myapp-message-img-span {
+	padding: 5px;
+}
+
+
+/*打字menu*/
+
+.myapp-message-bar {
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: auto;
+	padding: 5px 5px 0px 5px;
+	border-bottom: 0;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 1px #C7C7CC;
+	box-shadow: 0 0 1px #C7C7CC;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.myapp-message-input-div {
+	width: 100%;
+	height: auto;
+}
+
+.myapp-message-tool-div {
+	width: 100%;
+	height: 40px;
+	padding: 5px 0px;
+}
+
+.myapp-message-tool-div>i {
+	width: 23%;
+	text-align: center;
+	-webkit-user-select: none;
+	display: inline-block;
+	color: #C7C7CC;
+	font-size: 25px;
+}
+/*修改选中颜色*/
+.mui-icon.mui-active {
+    color: #ff6a4c;
+}
+
+
+textarea {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+#messageTv {
+	width: 92%;
+	height: auto;
+	overflow-Y: hidden;
+	max-height: 60px;
+	padding: 5px;
+	border: 0px;
+	-webkit-box-shadow: 0 0 1px #C7C7CC;
+	box-shadow: 0 0 1px #C7C7CC;
+	border-radius: 5px;
+	font: 16px/20px, sans-serif;
+	overflow: hidden;
+}
+
+
+/*按钮*/
+
+.myapp-btn-send {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 6px 12px;
+	color: #fff;
+	border: 1px solid #4CD964;
+	background-color: #4CD964;
+}
+
+.myapp-btn-send:enabled:active,
+.myapp-btn-send.mui-active:enabled {
+	color: #fff;
+	background-color: #2AC845;
+}
+
+
+/*表情*/
+
+.myapp-message-emoji-div {
+	width: 100%;
+	height: auto;
+}
+
+.myapp-message-emoji-div ul {
+	height: auto;
+	width: 100%;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	background: #FFFFFF;
+}
+.myapp-message-emoji-div > ul li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px 3px 0 3px;
+}
+
+
+/*小屏幕兼容*/
+
+@media(max-width:1024px) {
+	#messageTv {
+		width: 90%;
+	}
+	.mui-btn-blue,
+	.mui-btn-primary,
+	input[type=submit] {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.2;
+		padding: 6px 10px;
+	}
+}
+
+@media(max-width:768px) {
+	#messageTv {
+		width: 82%;
+	}
+	.mui-btn-blue,
+	.mui-btn-primary,
+	input[type=submit] {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.2;
+		padding: 6px 10px;
+	}
+}
+
+@media(max-width:320px) {
+	#messageTv {
+		width: 80%;
+	}
+	.mui-btn-blue,
+	.mui-btn-primary,
+	input[type=submit] {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.2;
+		padding: 6px 10px;
+	}
+}

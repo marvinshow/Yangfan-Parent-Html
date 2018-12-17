@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">绑定更多账号</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<ul class="mui-table-view">
+					<form class="mui-input-group">
+					<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+						<label>邀请码</label>
+						<input type="text" class="mui-input-clear" placeholder="从老师或园长中获取">
+					</div>
+					<div class="mui-button-row" style="height: 80px;margin-top: 10px;padding: 10px 25px 10px 25px;">
+						<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-success ">下一步</button>
+					</div>
+					</form>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.picker.js"></script>
+	<script src="../js/mui.poppicker.js"></script>
+
+	<script>
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui(this).button('loading');
+			setTimeout(function() {
+				mui(this).button('reset');
+			}.bind(this), 2000);
+		});
+
+		document.getElementById("alertBtn").addEventListener('tap', function() {
+			location.href="bind.html";
+		});
+	</script>
+
+</html>

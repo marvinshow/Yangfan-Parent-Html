@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">疾病过敏</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+
+				<ul class="mui-table-view">
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>既往病史</label>
+						<textarea id="disease" rows="5" placeholder="请输入孩子的既往病史"></textarea>
+					</div>
+				</ul>
+				<ul class="mui-table-view">
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<label>过敏药物</label>
+						<textarea id="textarea" rows="5" placeholder="请输入孩子的过敏药物"></textarea>
+					</div>
+					<div class="mui-button-row" style="height: 80px;margin-top: 10px;padding: 10px 10px 10px 15px;">
+						<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-success ">提交</button>
+					</div>
+				</ul>
+
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui(this).button('loading');
+			setTimeout(function() {
+				mui(this).button('reset');
+			}.bind(this), 2000);
+		});
+		
+		var info = document.getElementById("disease");
+		document.getElementById("alertBtn").addEventListener('tap', function() {
+			mui.alert('尚未填写孩子的既往病史或过敏药物', '', function() {
+				info.value = '你刚关闭了警告框';
+			});
+		});
+	</script>
+
+</html>

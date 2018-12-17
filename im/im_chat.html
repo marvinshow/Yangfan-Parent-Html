@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Hello MUI</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/chat.css" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">找老师</h1>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon iconfont icon-iconperson mui-pull-right"></a>
+		</header>
+
+		<div class="mui-content">
+			<ul id="chat_row_ul" class="myapp-chat-row">
+				<li class="myapp-chat-row-left mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/girl_b.png">
+					</div>
+					<div>
+						<span>你今天吃饭了没有</span>
+					</div>
+				</li>
+				<li class="myapp-chat-row-right mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/shuijiao.jpg">
+					</div>
+					<div>
+						<span>吃了</span>
+					</div>
+				</li>
+				<li class="myapp-chat-row-left mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/girl_b.png">
+					</div>
+					<div>
+						<span><img src="../images/faces/ee_1.png"></span>
+					</div>
+				</li>
+				<div class="title hb-div-chat-timestap">
+					<span class="hb-chat-timestap">2018年12月14日 11:53</span>
+				</div>
+				<li class="myapp-chat-row-right mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/shuijiao.jpg">
+					</div>
+					<div>
+						<span>发几张好看的风景照给我吧</span>
+					</div>
+				</li>
+				<li class="myapp-chat-row-left mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/girl_b.png">
+					</div>
+					<div>
+						<span class="myapp-message-img-span">
+							<img class="mui-media-object" src="../images/muwu.jpg" data-preview-src="" data-preview-group="1">
+						</span>
+					</div>
+				</li>
+				<div class="title hb-div-chat-timestap">
+					<span class="hb-chat-timestap">2018年12月16日 16:45</span>
+				</div>
+				<li class="myapp-chat-row-right mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/shuijiao.jpg">
+					</div>
+					<div>
+						<span>图片挺好看的</span>
+					</div>
+				</li>
+				<div class="title hb-div-chat-timestap">
+					<span class="hb-chat-timestap">11:53</span>
+				</div>
+				<li class="myapp-chat-row-left mui-clearfix">
+					<div>
+						<img class="myapp-user-head" src="../images/girl_b.png">
+					</div>
+					<div>
+						<span class="myapp-message-img-span">
+							<img class="myapp-message-img" src="../images/shuijiao.jpg">
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id='messageBar' class="myapp-message-bar">
+			<div class="myapp-message-input-div">
+				<textarea id="messageTv" rows="1" placeholder="请输入"></textarea>
+				<button id="messageSendBtn" type="button" class="mui-btn myapp-btn-send" >发送</button>
+			</div>
+			<div class="myapp-message-tool-div">
+				<i id="message_tool_emoji" class="mui-icon iconfont icon-biaoqing"></i>
+				<input id="messageCameraInp" type="file" accept="image/*" capture="camera" hidden="hidden">
+				<i id="message_icon_camera" class="mui-icon iconfont icon-xiangji"></i>
+				<input id="messagePhotoInp" type="file" accept="image/*" hidden="hidden" />
+				<i id="message_icon_photo" class="mui-icon iconfont icon-tupian"></i>
+				<i></i>
+			</div>
+			<div id="message_emoji_div" class="myapp-message-emoji-div mui-hidden">
+				<ul>
+					<li key="[):]" class="webim-emoji-item"><img src="../images/faces/ee_1.png"></li>
+					<li key="[:D]" class="webim-emoji-item"><img src="../images/faces/ee_2.png"></li>
+					<li key="[;)]" class="webim-emoji-item"><img src="../images/faces/ee_3.png"></li>
+					<li key="[:-o]" class="webim-emoji-item"><img src="../images/faces/ee_4.png"></li>
+					<li key="[:p]" class="webim-emoji-item"><img src="../images/faces/ee_5.png"></li>
+					<li key="[(H)]" class="webim-emoji-item"><img src="../images/faces/ee_6.png"></li>
+					<li key="[:@]" class="webim-emoji-item"><img src="../images/faces/ee_7.png"></li>
+					<li key="[:s]" class="webim-emoji-item"><img src="../images/faces/ee_8.png"></li>
+					<li key="[:$]" class="webim-emoji-item"><img src="../images/faces/ee_9.png"></li>
+					<li key="[:(]" class="webim-emoji-item"><img src="../images/faces/ee_10.png"></li>
+					<li key="[:'(]" class="webim-emoji-item"><img src="../images/faces/ee_11.png"></li>
+					<li key="[:|]" class="webim-emoji-item"><img src="../images/faces/ee_18.png"></li>
+					<li key="[(a)]" class="webim-emoji-item"><img src="../images/faces/ee_13.png"></li>
+					<li key="[8o|]" class="webim-emoji-item"><img src="../images/faces/ee_14.png"></li>
+					<li key="[8-|]" class="webim-emoji-item"><img src="../images/faces/ee_15.png"></li>
+					<li key="[+o(]" class="webim-emoji-item"><img src="../images/faces/ee_16.png"></li>
+					<li key="[<o)]" class="webim-emoji-item"><img src="../images/faces/ee_12.png"></li>
+					<li key="[|-)]" class="webim-emoji-item"><img src="../images/faces/ee_17.png"></li>
+					<li key="[*-)]" class="webim-emoji-item"><img src="../images/faces/ee_19.png"></li>
+					<li key="[:-#]" class="webim-emoji-item"><img src="../images/faces/ee_20.png"></li>
+					<li key="[:-*]" class="webim-emoji-item"><img src="../images/faces/ee_22.png"></li>
+					<li key="[^o)]" class="webim-emoji-item"><img src="../images/faces/ee_21.png"></li>
+					<li key="[8-)]" class="webim-emoji-item"><img src="../images/faces/ee_23.png"></li>
+					<li key="[(|)]" class="webim-emoji-item"><img src="../images/faces/ee_24.png"></li>
+					<li key="[(u)]" class="webim-emoji-item"><img src="../images/faces/ee_25.png"></li>
+					<li key="[(S)]" class="webim-emoji-item"><img src="../images/faces/ee_26.png"></li>
+					<li key="[(*)]" class="webim-emoji-item"><img src="../images/faces/ee_27.png"></li>
+					<li key="[(#)]" class="webim-emoji-item"><img src="../images/faces/ee_28.png"></li>
+					<li key="[(R)]" class="webim-emoji-item"><img src="../images/faces/ee_29.png"></li>
+					<li key="[({)]" class="webim-emoji-item"><img src="../images/faces/ee_30.png"></li>
+					<li key="[(})]" class="webim-emoji-item"><img src="../images/faces/ee_31.png"></li>
+					<li key="[(k)]" class="webim-emoji-item"><img src="../images/faces/ee_32.png"></li>
+					<li key="[(F)]" class="webim-emoji-item"><img src="../images/faces/ee_33.png"></li>
+					<li key="[(W)]" class="webim-emoji-item"><img src="../images/faces/ee_34.png"></li>
+					<li key="[(D)]" class="webim-emoji-item"><img src="../images/faces/ee_35.png"></li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/mui.zoom.js"></script>
+	<script src="../js/mui.previewimage.js"></script>
+	
+	<script>
+		mui.ready(function() {
+
+			/***
+			 * 禁用回车换行符
+			 */
+			var messageTv = document.getElementById("messageTv");
+			messageTv.onkeydown = function(e) {
+				send(e);
+			}
+
+			function send(e) {
+				var code;
+				if (!e) var e = window.event;
+				if (e.keyCode) code = e.keyCode;
+				else if (e.which) code = e.which;
+				if (code == 13 && window.event) {
+					e.returnValue = false;
+				} else if (code == 13) {
+					e.preventDefault();
+				}
+			}
+			/*实现输入框自适应高度*/
+			$('#messageTv').bind('input propertychange', function() {
+				this.style.height = 'auto';
+				this.style.height = this.scrollHeight + 'px';
+			});
+			/*滚动到最后一条显示*/
+			mui.scrollTo((window.screen.height + 100), 10);
+
+			/*实现表情面板显示功能*/
+
+			document.addEventListener('tap', function(e) {
+				//移除margin
+				$("#chat_row_ul").removeClass("myapp-chat-row-emoji");
+				//移除选中效果
+				$("#message_tool_emoji").removeClass("mui-active");
+				//隐藏弹出面板
+				$("#message_emoji_div").addClass("mui-hidden");
+			});
+			document.getElementById("message_tool_emoji").addEventListener('tap', function(e) {
+				$("#chat_row_ul").toggleClass("myapp-chat-row-emoji");
+				mui.scrollTo((window.screen.height + 100), 10);
+				$("#message_tool_emoji").toggleClass("mui-active");
+				$("#message_emoji_div").toggleClass("mui-hidden");
+				e = e || event;
+				stopFunc(e);
+			});
+
+			//阻止向上传递事件　　　　　
+			$('#message_emoji_div').bind("tap", function(e) {
+				e = e || event;
+				stopFunc(e);
+			});
+
+			function stopFunc(e) {
+				e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+			}
+
+			/*绑定*/
+			mui(".mui-bar").on("tap", ".icon-iconperson", function() {
+				mui.openWindow("chat_setting.html", 'chatSetting');
+			});
+
+			/*绑定表情点击事件*/
+			$("#message_emoji_div li").bind("tap", function() {
+				var emojiTx = $(this).attr('key');
+				$("#messageTv").val($("#messageTv").val() + emojiTx);
+				/*监听sendBtn*/
+				if ($("#messageSendBtn").attr("disabled") == 'disabled') {
+					$("#messageSendBtn").removeAttr("disabled");
+				}
+			});
+			/*监听消息框值变化*/
+			$("#messageTv").bind("propertychange input", function() {
+				if ($(this).val().length == 0) {
+					$("#messageSendBtn").attr("disabled", "true");
+				} else {
+					$("#messageSendBtn").removeAttr("disabled");
+				}
+			});
+
+			/***
+			 * 绑定打开相机功能
+			 */
+			$("#message_icon_camera").bind("tap", function() {
+				$("#messageCameraInp").click();
+			});
+
+			$("#message_icon_photo").bind("tap", function() {
+				$("#messagePhotoInp").click();
+			});
+
+			/*发送相片*/
+			$("#messageCameraInp").bind("change", function() {
+				mui.toast("发送拍照消息");
+			});
+			/*发送相册图片消息*/
+			$("#messagePhotoInp").bind("change", function() {
+				mui.toast("发送相册图片消息");
+			});
+
+		});
+	</script>
+</html>

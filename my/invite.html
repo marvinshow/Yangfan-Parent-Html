@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">邀请家人进入</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<ul class="mui-table-view">
+					<div style="margin: 10px 5px;padding: 20px 20px 20px 20px;">
+						亲爱的用户，为了让家里其他亲人/亲属也能关注到宝宝的成长瞬间，请您邀请其他家人进入。<br><br>
+						邀请方法：在下方输入您家人的信息，替TA注册好账号，然后让家人关注我们的“初课”公众号，点击“家园沟通”，选择“已有账号登录”，输入账号（您下方输入的手机号）和密码（您下方输入的密码）就可以登录了。
+					</div>
+				</ul>
+				<ul class="mui-table-view">
+					<form class="mui-input-group">
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+							<label>姓名</label>
+							<input type="text" class="mui-input-clear" placeholder="请输入家人的姓名">
+						</div>
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+							<label>身份</label>
+							<input type="text" class="mui-input-clear" placeholder="请选择" id="relation">
+						</div>
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+							<label>手机号</label>
+							<input type="text" class="mui-input-clear" placeholder="请输入家人的手机号">
+						</div>
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+							<label>密码</label>
+							<input type="password" class="mui-input-password" placeholder="请输入您为家人设置的密码">
+						</div>
+						<div class="mui-button-row" style="height: 80px;margin-top: 10px;padding: 10px 25px 10px 25px;">
+							<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-success ">提交</button>
+						</div>
+					</form>
+
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.picker.js"></script>
+	<script src="../js/mui.poppicker.js"></script>
+	<script>
+		(function($, doc) {
+			$.init();
+			$.ready(function() {
+				/**
+				 * 获取对象属性的值
+				 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+				 * @param {Object} obj 对象
+				 * @param {String} param 属性名
+				 */
+				var _getParam = function(obj, param) {
+					return obj[param] || '';
+				};
+				//普通示例
+				var userPicker = new $.PopPicker();
+				userPicker.setData([{
+					value: '爸爸',
+					text: '爸爸'
+				}, {
+					value: '妈妈',
+					text: '妈妈'
+				}, {
+					value: '爷爷',
+					text: '爷爷'
+				}, {
+					value: '奶奶',
+					text: '奶奶'
+				}, {
+					value: '外公',
+					text: '外公'
+				}, {
+					value: '外婆',
+					text: '外婆'
+				}]);
+				var showUserPickerButton = doc.getElementById('relation');
+				var userResult = doc.getElementById('relation');
+				showUserPickerButton.addEventListener('tap', function(event) {
+					userPicker.show(function(items) {
+						userResult.value = JSON.stringify(items[0]);
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+
+			});
+		})(mui, document);
+	</script>
+	<script>
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui(this).button('loading');
+			setTimeout(function() {
+				mui(this).button('reset');
+			}.bind(this), 2000);
+		});
+
+		document.getElementById("alertBtn").addEventListener('tap', function() {
+			mui.alert('尚未填写家长姓名', '', function() {
+
+			});
+		});
+	</script>
+
+</html>

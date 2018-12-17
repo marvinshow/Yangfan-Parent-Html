@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			body{
+				background-color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">班级通知</h1>
+		</header>
+		<div class="mui-content" style="background-color: #FFFFFF;">
+			<div class="mui-content-padded">
+				<h3>明天入园需自备热水杯</h3>
+				
+				<p class="hb-notice-detail">
+					<img src="../images/muwu.jpg">
+					经过几十年快速发展，中国又走到了一个新的关口。改革开放的复杂程度、艰巨程度、敏感程度，丝毫不亚于当年。<br>
+向内看，经济长期高速增长过程中积累的一系列深层次矛盾不断积聚，经济发展进入新常态，结构调整、动能转换势在必行；发展不平衡、不充分问题日益突出，人民群众对美好生活的向往愈发迫切。<br>
+向外看，国际金融危机阴霾未散，地区冲突频发，极端主义威胁蔓延；新科技革命和产业变革浪潮下的国际竞争形势逼人，逆全球化、贸易保护主义沉渣泛起，捧杀唱衰中国的论调此起彼伏。<br>
+在创造了“中国崛起”的世界奇迹后，不合时宜的思想观念和体制机制弊端正在成为阻碍改革开放步伐的“绊脚石”，利益固化藩篱更是频频触动社会稳定发展的“警报器”。<br>
+“必须以更大的政治勇气和智慧，不失时机深化重要领域改革”——创造历史自当弘毅，习近平总书记向海内外释放出改革再出发的强烈信号。<br>
+人们纷纷认为，这既是对波澜壮阔改革史的回顾致意，更是对新形势下继续高举新时代改革开放旗帜的坚定宣示。<br>
+				</p>
+				<div class="mui-button-row" style="height: 80px;padding: 30px 5px 10px 5px;">
+					<button type="button" class="mui-btn mui-btn-block mui-btn-success ">确认收到</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+</html>

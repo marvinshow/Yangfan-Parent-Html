@@ -1,0 +1,495 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+ 
+ /*字体统一为黑体*/
+ body{
+	 	font-family: "黑体";
+ }
+ /*阿里巴巴图标尺寸*/
+ .icon {
+ 	width: 1.5em;
+ 	height: 1.5em;
+ 	vertical-align: -0.15em;
+ 	fill: currentColor;
+ 	overflow: hidden;
+ }
+.mui-plus header.mui-bar {
+	display: none;
+}
+
+.mui-plus .mui-bar-nav~.mui-content {
+	padding: 0;
+}
+
+/*hm开头的表示仅为 Hello MUI示例定义*/
+.hm-description {
+	margin: .5em 0;
+}
+
+.hm-description>li {
+	font-size: 14px;
+	color: #8f8f94;
+}
+
+/*图片全屏预览*/
+.mui-preview-image.mui-fullscreen {
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+
+.mui-preview-header,
+.mui-preview-footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
+
+.mui-preview-header {
+	height: 44px;
+	top: 0;
+}
+
+.mui-preview-footer {
+	height: 50px;
+	bottom: 0px;
+}
+
+.mui-preview-header .mui-preview-indicator {
+	display: block;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	margin: 15px auto 4;
+	width: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+.mui-preview-image {
+	display: none;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.mui-preview-image.mui-preview-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.mui-preview-image.mui-preview-out {
+	background: none;
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+	display: none;
+}
+
+.mui-zoom-scroller {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.mui-zoom {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.mui-slider .mui-slider-group .mui-slider-item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+	width: 100%;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+	display: inline-table;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mui-preview-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.mui-preview-loading.mui-active {
+	display: block;
+}
+
+.mui-preview-loading .mui-spinner-white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	height: 50px;
+	width: 50px;
+}
+
+.mui-preview-image img.mui-transitioning {
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+p img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*首页图片排版*/
+.mui-table-view {
+	margin-top: 0px;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	background-color: #fff;
+}
+
+.mui-table-view .mui-media-body {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.mui-table-view .mui-media-author {
+	color: #576b95;
+	font-size: 16px;
+}
+
+.mui-table-view .mui-media-content {
+	color: black;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+/*我是有底线的样式*/
+.mui-index-bottom {
+	color: darkgray;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+.mui-index-top {
+	height: 250px;
+	background-image: url(../images/cbd.jpg)
+}
+
+.mui-index-top-title {
+	float: right;
+	margin-right: 100px;
+	margin-top: 220px;
+	list-style-type: none;
+	text-shadow: 2px 2px 2px #000;
+	color: #FFF;
+}
+
+.hb-index-top-icon {
+	width: 80px;
+	height: 80px;
+}
+
+.borderImage {
+	overflow: hidden;
+	float: right;
+	margin-right: -130px;
+	margin-top: 200px;
+	border-image-source: linear-gradient(white, white);
+	border-image-slice: 20;
+	border-style: solid;
+}
+
+.mui-table-view .hb-media-tag {
+	margin-top: 10px;
+	float: left;
+	display:inline-block;
+	width:100%;
+	position: relative;
+}
+/*评论内容上方的TAG信息*/
+.hb-tag-info {
+	float: left;
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #8f8f94
+}
+/*评论点赞弹出层*/
+.hb-comment-message {
+	position: absolute;
+	float: left;
+	z-index: 999;
+	right: 30px;
+	top:-10px;
+	font-size: 14px;
+	padding: 10px 25px;
+	text-align: center;
+	color: #fff;
+	border-radius: 6px;
+	background-color: #323232;
+	opacity: 0.9;
+}
+.hb-comment-message-text {
+	margin-left: 10px;
+	vertical-align:middle;
+}
+
+/*评论按钮*/
+.hb-comments-button {
+	position: relative;
+    right: -0.2rem;
+    display: block;
+    float: right;
+    width: 28px;
+    height: 21px;
+    z-index: 2;
+    background: #fff;
+    background: url(../images/comment2.png) no-repeat center;
+    background-size: 28px 21px;
+    cursor: pointer;
+    margin-right: 3px;
+    text-indent: -99999em;
+}
+
+/*评论区域*/
+.hb-comment-board {
+	display: block;
+	width:100%;
+	font-size: 14px;
+	position: relative;
+	overflow: hidden;
+	margin: 0px;
+	border-radius: 8px;
+	background-color: #fff;
+	background-clip: padding-box;
+	box-shadow: 0 0px 0px rgba(0, 0, 0, .3);
+}
+.hb-li-comment{
+	background-color:#F3F3F5;
+}
+.hb-li-comment-author {
+	color: #576b95;
+	vertical-align:top;
+}
+
+/*上下居中*/
+.verticalmiddle{
+	vertical-align:middle;
+}
+
+/*评论点赞分割线*/
+.splitline{
+	padding: 10px 5px;
+	text-align: center;
+	color:#000000;
+}
+
+/*新的未读消息*/
+.hb-newmessage {
+	margin:20px auto;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 6px;
+	background-color: #323232;
+	opacity: 0.9;
+}
+.hb-newmessage-content {
+	color: #fff;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.hb-newmessage-photo {
+	width: 25px;
+	height: 25px;
+	margin-top: 8px;
+	margin-left: 10px;
+
+}
+.hb-newmessage-arrow{
+	color:#000000;
+	margin-left: 15px;
+}
+
+/*消息页面*/
+.hb-message-author {
+	color: #576b95;
+	font-size: 16px;
+}
+.hb-message-content {
+	color: black;
+	font-size: 16px;
+}
+.hb-message-date {
+	margin-left: 60px;
+}
+.hb-message-rightpic {
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+.hb-message-item {
+	float: left;
+	display:inline-block;
+	width:100%;
+	position: relative;
+}
+.hb-message-info {
+	float: left;
+	width: 80%;
+}
+
+/*通知页面*/
+.hb-notice-tag {
+	margin:20px auto;
+	width: 130px;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 6px;
+	background-color: #CCCCCC;
+	opacity: 0.9;
+}
+.hb-notice-tag-content {
+	color: #fff;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.hb-notice-title {
+	position: absolute;
+	float: left;
+	z-index: 999;
+	left: 15px;
+	top:-40px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+.hb-notice-content {
+	left: 20px;
+	font-size: 15px;
+}
+.hb-notice-detail {
+	margin-top:30px;
+	left: 20px;
+	font-size: 15px;
+	color: #000000;
+	line-height: 30px;
+}
+.hb-notice-detail img {
+	max-width: 98%;
+}
+
+.hb-my-black a {
+	color:#000
+}
+
+.hb-div-chat-timestap {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin:20px auto;
+}
+.hb-chat-timestap {
+	padding: 3px 10px 3px 10px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 6px;
+	background-color: #CCCCCC;
+	opacity: 0.9;
+	text-align: center;
+	
+}
+
+
+
+.mui-input-row label {
+    font-family: '黑体', Helvetica, sans-serif;
+    line-height: 1.1;
+    float: left;
+    width: 35%;
+    padding: 11px 15px;
+}
