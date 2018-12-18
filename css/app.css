@@ -3,19 +3,26 @@
  * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
  * 
  * */
- 
- /*字体统一为黑体*/
- body{
-	 	font-family: "黑体";
- }
- /*阿里巴巴图标尺寸*/
- .icon {
- 	width: 1.5em;
- 	height: 1.5em;
- 	vertical-align: -0.15em;
- 	fill: currentColor;
- 	overflow: hidden;
- }
+
+/*字体统一为黑体*/
+body {
+	font-family: "黑体";
+}
+
+/*底部导航自定义的颜色*/
+.mui-bar-tab .mui-tab-item.mui-active {
+	color: #1AAD19;
+}
+
+/*阿里巴巴图标尺寸*/
+.icon {
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
 .mui-plus header.mui-bar {
 	display: none;
 }
@@ -262,6 +269,15 @@ p img {
 	color: #FFF;
 }
 
+.childname_current {
+	position: relative;
+	margin-right: 10px;
+	width: 110px;
+	float: right;
+	text-align: right;
+	cursor: pointer;
+}
+
 .childlist {
 	position: absolute;
 	float: left;
@@ -272,11 +288,11 @@ p img {
 	margin-top: 25px;
 	margin-left: 10px;
 	border: 1px solid #efeff4;
-    border-radius: 6px; 
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
+	border-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
 	background-color: #fff;
 	padding: 10px 10px 10px 10px;
 	text-shadow: 0px 0px 0px #fff;
@@ -288,7 +304,7 @@ p img {
 	overflow: hidden;
 	width: 80px;
 	height: 80px;
-	margin-top: -30px;
+	margin-top: -20px;
 	border-image-source: linear-gradient(white, white);
 	border-image-slice: 20;
 	border-style: solid;
@@ -298,24 +314,27 @@ p img {
 .mui-table-view .hb-media-tag {
 	margin-top: 10px;
 	float: left;
-	display:inline-block;
-	width:100%;
+	display: inline-block;
+	width: 100%;
 	position: relative;
 }
+
 /*动态页面视频类型信息的样式*/
 .hb-dongtai-video {
 	position: relative;
 	margin-top: 10px;
 }
+
 .hb-dongtai-video-pic {
 	width: 150px;
 	height: 250px;
 }
+
 .hb-dongtai-video-play {
-	position:absolute;
+	position: absolute;
 	z-index: 999;
 	top: 100px;
-	left:50px;
+	left: 50px;
 	width: 50px;
 	height: 50px;
 }
@@ -328,13 +347,14 @@ p img {
 	margin-bottom: 10px;
 	color: #8f8f94
 }
+
 /*评论点赞弹出层*/
 .hb-comment-message {
 	position: absolute;
 	float: left;
 	z-index: 999;
 	right: 30px;
-	top:-10px;
+	top: -10px;
 	font-size: 14px;
 	padding: 10px 25px;
 	text-align: center;
@@ -343,32 +363,33 @@ p img {
 	background-color: #323232;
 	opacity: 0.9;
 }
+
 .hb-comment-message-text {
 	margin-left: 10px;
-	vertical-align:middle;
+	vertical-align: middle;
 }
 
 /*评论按钮*/
 .hb-comments-button {
 	position: relative;
-    right: -0.2rem;
-    display: block;
-    float: right;
-    width: 28px;
-    height: 21px;
-    z-index: 2;
-    background: #fff;
-    background: url(../images/comment2.png) no-repeat center;
-    background-size: 28px 21px;
-    cursor: pointer;
-    margin-right: 3px;
-    text-indent: -99999em;
+	right: -0.2rem;
+	display: block;
+	float: right;
+	width: 28px;
+	height: 21px;
+	z-index: 2;
+	background: #fff;
+	background: url(../images/comment2.png) no-repeat center;
+	background-size: 28px 21px;
+	cursor: pointer;
+	margin-right: 3px;
+	text-indent: -99999em;
 }
 
 /*评论区域*/
 .hb-comment-board {
 	display: block;
-	width:100%;
+	width: 100%;
 	font-size: 14px;
 	position: relative;
 	overflow: hidden;
@@ -378,29 +399,31 @@ p img {
 	background-clip: padding-box;
 	box-shadow: 0 0px 0px rgba(0, 0, 0, .3);
 }
-.hb-li-comment{
-	background-color:#F3F3F5;
+
+.hb-li-comment {
+	background-color: #F3F3F5;
 }
+
 .hb-li-comment-author {
 	color: #576b95;
-	vertical-align:top;
+	vertical-align: top;
 }
 
 /*上下居中*/
-.verticalmiddle{
-	vertical-align:middle;
+.verticalmiddle {
+	vertical-align: middle;
 }
 
 /*评论点赞分割线*/
-.splitline{
+.splitline {
 	padding: 10px 5px;
 	text-align: center;
-	color:#000000;
+	color: #000000;
 }
 
 /*新的未读消息*/
 .hb-newmessage {
-	margin:20px auto;
+	margin: 30px auto;
 	width: 200px;
 	height: 40px;
 	text-align: center;
@@ -411,11 +434,13 @@ p img {
 	background-color: #323232;
 	opacity: 0.9;
 }
+
 .hb-newmessage-content {
 	color: #fff;
 	margin-top: 10px;
 	margin-left: 15px;
 }
+
 .hb-newmessage-photo {
 	width: 25px;
 	height: 25px;
@@ -423,8 +448,9 @@ p img {
 	margin-left: 10px;
 
 }
-.hb-newmessage-arrow{
-	color:#000000;
+
+.hb-newmessage-arrow {
+	color: #000000;
 	margin-left: 10px;
 }
 
@@ -433,24 +459,29 @@ p img {
 	color: #576b95;
 	font-size: 16px;
 }
+
 .hb-message-content {
 	color: black;
 	font-size: 16px;
 }
+
 .hb-message-date {
 	margin-left: 60px;
 }
+
 .hb-message-rightpic {
-    float: right;
-    width: 50px;
-    height: 50px;
+	float: right;
+	width: 50px;
+	height: 50px;
 }
+
 .hb-message-item {
 	float: left;
-	display:inline-block;
-	width:100%;
+	display: inline-block;
+	width: 100%;
 	position: relative;
 }
+
 .hb-message-info {
 	float: left;
 	width: 80%;
@@ -458,7 +489,7 @@ p img {
 
 /*通知页面*/
 .hb-notice-tag {
-	margin:20px auto;
+	margin: 20px auto;
 	width: 130px;
 	height: 20px;
 	text-align: center;
@@ -468,46 +499,52 @@ p img {
 	background-color: #CCCCCC;
 	opacity: 0.9;
 }
+
 .hb-notice-tag-content {
 	color: #fff;
 	margin-top: 10px;
 	margin-left: 15px;
 }
+
 .hb-notice-title {
 	position: absolute;
 	float: left;
 	z-index: 999;
 	left: 15px;
-	top:-40px;
+	top: -40px;
 	color: #fff;
 	font-size: 20px;
 	text-align: center;
 }
+
 .hb-notice-content {
 	left: 20px;
 	font-size: 15px;
 }
+
 .hb-notice-detail {
-	margin-top:30px;
+	margin-top: 30px;
 	left: 20px;
 	font-size: 15px;
 	color: #000000;
 	line-height: 30px;
 }
+
 .hb-notice-detail img {
 	max-width: 98%;
 }
 
 .hb-my-black a {
-	color:#000
+	color: #000
 }
 
 .hb-div-chat-timestap {
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin:20px auto;
+	margin: 20px auto;
 }
+
 .hb-chat-timestap {
 	padding: 3px 10px 3px 10px;
 	text-align: center;
@@ -517,15 +554,29 @@ p img {
 	background-color: #CCCCCC;
 	opacity: 0.9;
 	text-align: center;
-	
+
 }
 
 
 
 .mui-input-row label {
-    font-family: '黑体', Helvetica, sans-serif;
-    line-height: 1.1;
-    float: left;
-    width: 35%;
-    padding: 11px 15px;
+	font-family: '黑体', Helvetica, sans-serif;
+	line-height: 1.1;
+	float: left;
+	width: 35%;
+	padding: 11px 15px;
+}
+
+/*底部导航条的加号样式*/
+.plus {
+	position: absolute;
+	overflow: hidden;
+	z-index: 9999;
+	width: 50px;
+	height: 50px;
+	background: #f7f7f7;
+	margin-top: -40px;
+	margin-left: 20px;
+	border: 2px solid #f7f7f7;
+	border-radius: 50%;
 }

@@ -18,24 +18,26 @@
 			.mui-table-view-cell.mui-active {
 				background-color: #fff
 			}*/
+		
 		</style>
 
 	</head>
 
 	<body>
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#">
-				<span class="mui-icon mui-icon-home"></span>
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-star-filled"></span>
 				<span class="mui-tab-label">动态</span>
 			</a>
 			<a class="mui-tab-item" href="notice/notice.html">
 				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">通知</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="#">
-				<span class="mui-icon mui-icon-plus-filled"></span>
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<div class="plus">
+					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
+				</div>
 			</a>
-
 			<a class="mui-tab-item" href="im/im_chat.html">
 				<span class="mui-icon mui-icon-chatbubble"></span>
 				<span class="mui-tab-label">找老师</span>
@@ -49,11 +51,11 @@
 		<div class="mui-content">
 			<div class="mui-index-top">
 				<div class="mui-index-top-title">
-					<div class="borderImage"><img style="width: 80px;height: 80px;" src="images/shuijiao.jpg"></div>
-					<div id="div_childname" style="position: relative;margin-right:10px;width: 110px;float: right;text-align: right;">
+					<div class="borderImage"><img style="width: 80px;height: 80px;" src="images/girl_b.png"></div>
+					<div id="div_childname" class="childname_current">
 						<span >
 						<img style="width: 15px; height: 10px;" src="images/arrow.png" />
-						于涵</span>
+						于涵中</span>
 					</div>
 					<div id="div_childnamelist" class="childlist mui-hidden">
 						<ul class="mui-table-view " style="width: 100%;">
@@ -72,10 +74,10 @@
 
 			</div>
 
-			<div class="hb-newmessage" id="div_newmessage" style="display: none1;">
+			<div class="hb-newmessage mui-hidden1" id="div_newmessage">
 				<a href="my/message.html">
 					<img class="mui-media-object mui-pull-left hb-newmessage-photo" src="images/girl_b.png">
-					<span class="hb-newmessage-content">有28条新消息</span>
+					<span class="hb-newmessage-content">有26条新消息</span>
 					<span class="hb-newmessage-arrow">></span>
 				</a>
 			</div>
@@ -272,6 +274,7 @@
 		// 			mui.toast('欢迎体验Hello MUI');
 		// 		});
 
+		//点击“评论”按钮图标弹出评论功能菜单
 		function showCommentMenu(v) {
 			var a = document.getElementById('div-comment-message' + v);
 			if(a.className.indexOf("mui-hidden")>-1){
