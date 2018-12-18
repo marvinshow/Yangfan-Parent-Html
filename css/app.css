@@ -255,26 +255,44 @@ p img {
 
 .mui-index-top-title {
 	float: right;
-	margin-right: 100px;
+	margin-right: 10px;
 	margin-top: 220px;
 	list-style-type: none;
 	text-shadow: 2px 2px 2px #000;
 	color: #FFF;
 }
 
-.hb-index-top-icon {
-	width: 80px;
-	height: 80px;
+.childlist {
+	position: absolute;
+	float: left;
+	z-index: 999;
+	width: 100px;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 25px;
+	margin-left: 10px;
+	border: 1px solid #efeff4;
+    border-radius: 6px; 
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+	text-shadow: 0px 0px 0px #fff;
+	color: #000;
 }
 
 .borderImage {
+	position: relative;
 	overflow: hidden;
-	float: right;
-	margin-right: -130px;
-	margin-top: 200px;
+	width: 80px;
+	height: 80px;
+	margin-top: -30px;
 	border-image-source: linear-gradient(white, white);
 	border-image-slice: 20;
 	border-style: solid;
+	float: right;
 }
 
 .mui-table-view .hb-media-tag {
@@ -284,6 +302,24 @@ p img {
 	width:100%;
 	position: relative;
 }
+/*动态页面视频类型信息的样式*/
+.hb-dongtai-video {
+	position: relative;
+	margin-top: 10px;
+}
+.hb-dongtai-video-pic {
+	width: 150px;
+	height: 250px;
+}
+.hb-dongtai-video-play {
+	position:absolute;
+	z-index: 999;
+	top: 100px;
+	left:50px;
+	width: 50px;
+	height: 50px;
+}
+
 /*评论内容上方的TAG信息*/
 .hb-tag-info {
 	float: left;
@@ -389,7 +425,7 @@ p img {
 }
 .hb-newmessage-arrow{
 	color:#000000;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 /*消息页面*/

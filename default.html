@@ -48,8 +48,28 @@
 
 		<div class="mui-content">
 			<div class="mui-index-top">
-				<li class="mui-index-top-title">于涵</li>
-				<div class="borderImage"><img class="hb-index-top-icon" src="images/shuijiao.jpg"></div>
+				<div class="mui-index-top-title">
+					<div class="borderImage"><img style="width: 80px;height: 80px;" src="images/shuijiao.jpg"></div>
+					<div id="div_childname" style="position: relative;margin-right:10px;width: 110px;float: right;text-align: right;">
+						<span >
+						<img style="width: 15px; height: 10px;" src="images/arrow.png" />
+						于涵</span>
+					</div>
+					<div id="div_childnamelist" class="childlist mui-hidden">
+						<ul class="mui-table-view " style="width: 100%;">
+							<li class="mui-table-view-cell">
+								陈亮亮
+							</li>
+							<li class="mui-table-view-cell">
+								刘洪鸣
+							</li>
+							<li class="mui-table-view-cell">
+								刘美西
+							</li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="hb-newmessage" id="div_newmessage" style="display: none1;">
@@ -84,7 +104,7 @@
 								<span>通知作业</span>
 								<span style="margin-left: 50px;color: #576b95;">删除</span>
 							</div>
-							<div class="hb-comment-message" id="div-comment-message1" style="display: none;">
+							<div class="hb-comment-message mui-hidden" id="div-comment-message1">
 								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
 								<span class="splitline">|</span>
 								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
@@ -121,16 +141,16 @@
 						<p class="mui-media-author">李婷婷(保育员)</p>
 						<p class="mui-media-content">今天孩子玩得真开心</p>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
 								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
 							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
 								<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
 							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
 								<img class="mui-media-object" src="images/cbd.jpg" data-preview-src="" data-preview-group="2">
 							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
 								<img class="mui-media-object" src="images/yuantiao.jpg" data-preview-src="" data-preview-group="2">
 							</li>
 						</ul>
@@ -140,7 +160,7 @@
 								<span>班级圈</span>
 								<span style="margin-left: 50px;color: #576b95;">删除</span>
 							</div>
-							<div class="hb-comment-message" id="div-comment-message2" style="display: none;">
+							<div class="hb-comment-message mui-hidden" id="div-comment-message2">
 								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
 								<span class="splitline">|</span>
 								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
@@ -168,34 +188,19 @@
 					<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
 					<div class="mui-media-body">
 						<p class="mui-media-author">陈刚(园长)</p>
-						<p class="mui-media-content">幼儿园的孩子们吃得真开心</p>
-						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/cbd.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/yuantiao.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/yuantiao.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/yuantiao.jpg" data-preview-src="" data-preview-group="3">
-							</li>
-						</ul>
+						<p class="mui-media-content">消防员叔叔来教我们面对火情应该如何保护自己</p>
+						<div class="hb-dongtai-video" id="div_video">
+							<img class="hb-dongtai-video-pic" src="images/videopic.jpg">
+							<img class="hb-dongtai-video-play" src="images/play.png">
+							<video class="mui-hidden" id="videoID" autoplay="autoplay" src="http://v001.1d1d100.com/66432bf0f13322b37ff513008e0c7dd8.mp4" controls="" preload="none" loop="" style="object-fit: fill;"></video>
+						</div>
 						<div class="hb-media-tag">
 							<div class="hb-tag-info">
-								<span>12:00</span>
-								<span>在线食谱</span>
+								<span>2018.12.10 21:33</span>
+								<span>宝宝视频</span>
 								<span style="margin-left: 50px;color: #576b95;">删除</span>
 							</div>
-							<div class="hb-comment-message" id="div-comment-message3" style="display: none;">
+							<div class="hb-comment-message mui-hidden" id="div-comment-message3">
 								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
 								<span class="splitline">|</span>
 								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
@@ -206,8 +211,47 @@
 						</div>
 					</div>
 				</li>
-
-
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<img class="mui-media-object mui-pull-left" src="images/yuantiao.jpg">
+					<div class="mui-media-body">
+						<p class="mui-media-author">刘鑫(班主任)</p>
+						<p class="mui-media-content">看看我们的小小发明家</p>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-12">
+								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+							</li>
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>15:12</span>
+								<span>班级圈</span>
+								<span style="margin-left: 50px;color: #576b95;">删除</span>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message4">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(4)"></div>
+						</div>
+						<div class="hb-comment-board">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="mui-icon-extra mui-icon-extra-heart"></span>
+									<span class="hb-li-comment-author">
+										谢美西的妈妈 米奇妈妈
+									</span>
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">陈浩然的妈妈：</span>看到孩子玩得开心，我们家长也很开心，老师们辛苦了！
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				
 			</ul>
 
 			<div class="mui-index-bottom">
@@ -219,6 +263,7 @@
 	<script src="js/mui.min.js"></script>
 	<script src="js/mui.zoom.js"></script>
 	<script src="js/mui.previewimage.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<script>
 		mui('body').on('tap','a',function(){document.location.href=this.href;});
 		mui.previewImage();
@@ -229,11 +274,34 @@
 
 		function showCommentMenu(v) {
 			var a = document.getElementById('div-comment-message' + v);
-			if (a.style.display == '') {
-				a.style.display = 'none';
-			} else {
-				a.style.display = '';
+			if(a.className.indexOf("mui-hidden")>-1){
+				a.classList.remove('mui-hidden');
 			}
+			else {
+				a.classList.add('mui-hidden');
+			}
+			
+		}
+		
+		//点击“V”弹出多个孩子的姓名列表菜单
+		var btn = document.getElementById("div_childname");
+		var li = document.getElementById('div_childnamelist') ;//获取li元素
+		btn.onclick=function(e){
+			//alert("click");
+			if(li.className.indexOf("mui-hidden")>-1){
+				document.getElementById("div_childnamelist").classList.remove('mui-hidden');
+			}
+			else {
+				document.getElementById("div_childnamelist").classList.add('mui-hidden');
+			}
+		}
+
+
+		//播放视频
+		var div_video = document.getElementById("div_video");
+		div_video.onclick=function(e){
+			//alert("click88");
+			document.getElementById("videoID").play();
 		}
 	</script>
 
