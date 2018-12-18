@@ -133,6 +133,9 @@ ul li span:after {
 .myapp-message-img-span {
 	padding: 5px;
 }
+.myapp-message-img-span img {
+	width: 100%;
+}
 
 
 /*打字menu*/
@@ -183,7 +186,7 @@ textarea {
 	margin-bottom: 0px;
 }
 
-#messageTv {
+#messageInput {
 	width: 92%;
 	height: auto;
 	overflow-Y: hidden;
@@ -247,8 +250,8 @@ textarea {
 
 }
 .borderApp p {
-	width: 3.5em;
-	height: 3.5em;
+	width: 4.5em;
+	height: 4em;
 	margin-top: 10px;
 	margin-bottom: 0px;
 	border: 1px solid #efeff4;
@@ -259,11 +262,24 @@ textarea {
     border-bottom-left-radius: 6px;
 }
 
+.moudel {
+	font-size: 12px;
+	border: 1px solid #efeff4;
+    border-radius: 6px; 
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+	background-color: #EEEEEE;
+	padding: 10px 10px 10px 10px;
+	margin-right: 1.5em;
+}
+
 
 /*小屏幕兼容*/
 
 @media(max-width:1024px) {
-	#messageTv {
+	#messageInput {
 		width: 90%;
 	}
 	.mui-btn-blue,
@@ -277,7 +293,7 @@ textarea {
 }
 
 @media(max-width:768px) {
-	#messageTv {
+	#messageInput {
 		width: 82%;
 	}
 	.mui-btn-blue,
@@ -291,7 +307,7 @@ textarea {
 }
 
 @media(max-width:320px) {
-	#messageTv {
+	#messageInput {
 		width: 80%;
 	}
 	.mui-btn-blue,

@@ -18,7 +18,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">找老师</h1>
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<a class="mui-icon iconfont icon-iconperson mui-pull-right"></a>
+			<span class="mui-icon iconfont icon-iconperson mui-pull-right"></span>
 		</header>
 
 		<div class="mui-content">
@@ -88,7 +88,7 @@
 					</div>
 					<div>
 						<span class="myapp-message-img-span">
-							<img class="myapp-message-img" src="../images/shuijiao.jpg">
+							<img class="myapp-message-img" src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
 						</span>
 					</div>
 				</li>
@@ -104,35 +104,39 @@
 		</div>
 		<div id='messageBar' class="myapp-message-bar">
 			<div class="myapp-message-input-div">
-				<textarea id="messageTv" rows="1" style="width: 70%;height: auto;"></textarea>
+				<textarea id="messageInput" rows="1" style="width: 70%;height: auto;"></textarea>
 				<img id="message_tool_emoji" src="../images/emoji.png" style="max-width: 30px;height: auto;">
 				<img id="message_tool_moudel" src="../images/moudel.png" style="max-width: 30px;height: auto;">
 				<img id="message_tool_more" src="../images/more.png" style="max-width: 30px;height: auto;">
 				<button id="messageSendBtn" type="button" class="mui-btn myapp-btn-send mui-hidden">发送</button>
 			</div>
-			<div class="myapp-message-tool-div mui-hidden">
+			<div id="moudel_content" class="myapp-message-tool-div mui-hidden" style="height: 60px;">
+				<div style="margin-top: 10px;">
+					<span class="moudel" value="收到!">收到</span>
+					<span class="moudel" value="现在有点忙,一会回复您,抱歉哦!">现在忙</span>
+					<span class="moudel" value="不客气,我们应该做的~">不客气</span>
+					<span class="moudel" value="好的">好的</span>
+					<span class="moudel" value="行,知道啦!">知道了</span>
+				</div>
+			</div>
+			<div id="More_content" class="myapp-message-tool-div mui-hidden">
 				<input id="messageCameraInp" type="file" accept="image/*" capture="camera" hidden="hidden">
-				<i id="message_icon_camera" class="mui-icon iconfont icon-xiangji"></i>
 				<div class="borderApp">
 					<p>
-					<svg class="icon" style="width: 2.5em;height: 3.5em;" aria-hidden="true">
-						<use xlink:href="#icon-xiangce"></use>
-					</svg>
+						<i id="message_icon_photo" class="mui-icon iconfont icon-tupian" style="font-size: 50px;"></i>
 					</p>
 					<span style="font-size: 10px;text-align: center;">相册</span>
 				</div>
+				
+				<input id="messagePhotoInp" type="file" accept="image/*" hidden="hidden" />
 				<div class="borderApp">
 					<p>
-					<svg class="icon" style="width: 2.5em;height: 3.5em;" aria-hidden="true">
-						<use xlink:href="#icon-kaoqinguanli-"></use>
-					</svg>
+						<i id="message_icon_camera" class="mui-icon iconfont icon-xiangji" style="font-size: 50px;"></i>
 					</p>
 					<span style="font-size: 10px;text-align: center;">拍摄</span>
 				</div>
-				<input id="messagePhotoInp" type="file" accept="image/*" hidden="hidden" />
-				<i id="message_icon_photo" class="mui-icon iconfont icon-tupian"></i>
-				<i></i>
 			</div>
+			
 			<div id="message_emoji_div" class="myapp-message-emoji-div mui-hidden">
 				<ul>
 					<li key="[):]" class="webim-emoji-item"><img src="../images/faces/ee_1.png"></li>
@@ -182,18 +186,36 @@
 	<script src="../fonts/iconfont.js"></script>
 
 	<script>
-		mui.ready(function() {
+		//聊天界面里的图片预览
+		mui.previewImage();
 
-			/***
-			 * 禁用回车换行符
-			 */
-			document.getElementById('#message_tool_more').addEventListener('tap', function() {
-				alert("我被点击 了");
-			})
-			var messageTv = document.getElementById("messageTv");
-			messageTv.onkeyup = function(e) {
-				//alert("获得焦点");
-				if (messageTv.value != "") {
+		mui.ready(function() {
+			//点击“常”呼出快捷输入短语
+			var btn = document.getElementById("message_tool_moudel");
+			btn.onclick=function(e){
+				//alert("click");
+				document.getElementById("moudel_content").classList.remove('mui-hidden');
+				document.getElementById("More_content").classList.add('mui-hidden');
+			}
+			
+			//点击“+”呼出隐藏的更多应用面板
+			var btn = document.getElementById("message_tool_more");
+			btn.onclick=function(e){
+				//alert("click");
+				document.getElementById("More_content").classList.remove('mui-hidden');
+				document.getElementById("moudel_content").classList.add('mui-hidden');
+			}
+			
+			//消息输入框的事件
+			var messageInput = document.getElementById("messageInput");
+			messageInput.onclick = function(e) {
+				//只要消息输入框获得焦点就要隐藏更多应用面板
+				document.getElementById("More_content").classList.add('mui-hidden'); 
+				document.getElementById("More_moudel").classList.add('mui-hidden'); 
+			}
+			messageInput.onkeyup = function(e) {
+				//alert("键盘弹起");
+				if (messageInput.value != "") {
 					document.getElementById("message_tool_more").classList.add('mui-hidden');
 					document.getElementById("messageSendBtn").classList.remove('mui-hidden');
 				} else {
@@ -203,7 +225,10 @@
 
 				send(e);
 			}
-
+			
+			/***
+			 * 禁用回车换行符
+			 */
 			function send(e) {
 				var code;
 				if (!e) var e = window.event;
@@ -216,7 +241,7 @@
 				}
 			}
 			/*实现输入框自适应高度*/
-			$('#messageTv').bind('input propertychange', function() {
+			$('#messageInput').bind('input propertychange', function() {
 				this.style.height = 'auto';
 				this.style.height = this.scrollHeight + 'px';
 			});
@@ -260,14 +285,14 @@
 			/*绑定表情点击事件*/
 			$("#message_emoji_div li").bind("tap", function() {
 				var emojiTx = $(this).attr('key');
-				$("#messageTv").val($("#messageTv").val() + emojiTx);
+				$("#messageInput").val($("#messageInput").val() + emojiTx);
 				/*监听sendBtn*/
 				if ($("#messageSendBtn").attr("disabled") == 'disabled') {
 					$("#messageSendBtn").removeAttr("disabled");
 				}
 			});
 			/*监听消息框值变化*/
-			$("#messageTv").bind("propertychange input", function() {
+			$("#messageInput").bind("propertychange input", function() {
 				if ($(this).val().length == 0) {
 					$("#messageSendBtn").attr("disabled", "true");
 				} else {
