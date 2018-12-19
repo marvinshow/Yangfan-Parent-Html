@@ -18,7 +18,15 @@
 			.mui-table-view-cell.mui-active {
 				background-color: #fff
 			}*/
-		
+			
+			/*右侧下拉弹出菜单*/
+			.rightPopover {
+				top: 40px;
+				right: 9px;
+			}
+			.mui-popover {
+				height: 140px;
+			}
 		</style>
 
 	</head>
@@ -57,7 +65,7 @@
 					<button type="button" class="mui-btn mui-btn-green" style="margin-right: 20px;width: 70px;">发送</button>
 				</p>
 			</div>
-			
+
 			<!--如果用户上传自定义背景图时，则改变此处的背景图
 			<div class="mui-index-top" style="background-image: url(images/cbd.jpg);background-repeat: no-repeat;background-position: 50%;background-size: 100%">
 			-->
@@ -65,9 +73,9 @@
 				<div class="mui-index-top-title">
 					<div class="borderImage"><img style="width: 80px;height: 80px;" src="images/girl_b.png"></div>
 					<div id="div_childname" class="childname_current">
-						<span >
-						<img style="width: 15px; height: 10px;" src="images/arrow.png" />
-						于涵中</span>
+						<span>
+							<img style="width: 15px; height: 10px;" src="images/arrow.png" />
+							于涵中</span>
 					</div>
 					<div id="div_childnamelist" class="childlist mui-hidden">
 						<ul class="mui-table-view " style="width: 100%;">
@@ -99,8 +107,26 @@
 				<li class="mui-table-view-cell mui-media" style="width: 100%;">
 					<img class="mui-media-object mui-pull-left" src="images/girl_b.png">
 					<div class="mui-media-body">
-						<p class="mui-media-author">王涛(主班老师)</p>
-						<p class="mui-media-content">布置作业</p>
+						<div>
+							<span class="mui-media-author" style="float: left;">王涛(主班老师)</span>
+							<span style="float: right;">
+								<img id="pull1" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover1" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">布置作业</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-4">
 								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
@@ -149,11 +175,31 @@
 					</div>
 				</li>
 
+
+
 				<li class="mui-table-view-cell mui-media" style="width: 100%;">
 					<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
 					<div class="mui-media-body">
-						<p class="mui-media-author">李婷婷(保育员)</p>
-						<p class="mui-media-content">今天孩子玩得真开心</p>
+						<div>
+							<span class="mui-media-author" style="float: left;">李婷婷(保育员)</span>
+							<span style="float: right;">
+								<img id="pull2" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover2" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">今天孩子玩得真开心</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-6">
 								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
@@ -201,12 +247,31 @@
 				<li class="mui-table-view-cell mui-media" style="width: 100%;">
 					<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
 					<div class="mui-media-body">
-						<p class="mui-media-author">陈刚(园长)</p>
-						<p class="mui-media-content">消防员叔叔来教我们面对火情应该如何保护自己</p>
+						<div>
+							<span class="mui-media-author" style="float: left;">陈刚(园长)</span>
+							<span style="float: right;">
+								<img id="pull3" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover3" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">消防员叔叔来教我们面对火情应该如何保护自己</div>
 						<div class="hb-dongtai-video" id="div_video">
 							<img class="hb-dongtai-video-pic" src="images/videopic.jpg">
 							<img class="hb-dongtai-video-play" src="images/play.png">
-							<video class="mui-hidden" id="videoID" autoplay="autoplay" src="http://v001.1d1d100.com/66432bf0f13322b37ff513008e0c7dd8.mp4" controls="" preload="none" loop="" style="object-fit: fill;"></video>
+							<video class="mui-hidden" id="videoID" autoplay="autoplay" src="http://v001.1d1d100.com/66432bf0f13322b37ff513008e0c7dd8.mp4"
+							 controls="" preload="none" loop="" style="object-fit: fill;"></video>
 						</div>
 						<div class="hb-media-tag">
 							<div class="hb-tag-info">
@@ -228,8 +293,26 @@
 				<li class="mui-table-view-cell mui-media" style="width: 100%;">
 					<img class="mui-media-object mui-pull-left" src="images/yuantiao.jpg">
 					<div class="mui-media-body">
-						<p class="mui-media-author">刘鑫(班主任)</p>
-						<p class="mui-media-content">看看我们的小小发明家</p>
+						<div>
+							<span class="mui-media-author" style="float: left;">刘鑫(班主任)</span>
+							<span style="float: right;">
+								<img id="pull4" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover4" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">看看我们的小小发明家</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-12">
 								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
@@ -265,7 +348,7 @@
 						</div>
 					</div>
 				</li>
-				
+
 			</ul>
 
 			<div class="mui-index-bottom">
@@ -281,25 +364,25 @@
 			<div id='messageBar' class="post-bar">
 				<div id="More_content" class="post-tool-div">
 					<a href="my/post.html">
-					<div class="div-post-icon">
-						<p>
-							<svg class="posticon" aria-hidden="true">
-								<use xlink:href="#icon-dongtai1"></use>
-							</svg>
-						</p>
-						<span style="color: #000;">发动态</span>
-					</div>
+						<div class="div-post-icon">
+							<p>
+								<svg class="posticon" aria-hidden="true">
+									<use xlink:href="#icon-dongtai1"></use>
+								</svg>
+							</p>
+							<span style="color: #000;">发动态</span>
+						</div>
 					</a>
 
 					<a href="my/post.html">
-					<div class="div-post-icon">
-						<p>
-							<svg class="posticon" aria-hidden="true">
-								<use xlink:href="#icon-shipinwenjian"></use>
-							</svg>
-						</p>
-						<span style="color: #000;">拍摄</span>
-					</div>
+						<div class="div-post-icon">
+							<p>
+								<svg class="posticon" aria-hidden="true">
+									<use xlink:href="#icon-shipinwenjian"></use>
+								</svg>
+							</p>
+							<span style="color: #000;">拍摄</span>
+						</div>
 					</a>
 				</div>
 				<div id="closepost" class="closeIcon"><img src="images/close.png" /></div>
@@ -313,9 +396,11 @@
 	<script src="js/mui.previewimage.js"></script>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script>
-		mui('body').on('tap','a',function(){document.location.href=this.href;});
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
 		mui.previewImage();
-		
+
 		//点击底部导航条的加号弹出应用菜单
 		document.getElementById("div_plus").addEventListener('tap', function() {
 			document.getElementById('div_postboard').classList.remove('mui-hidden');
@@ -330,40 +415,51 @@
 		//点击“评论”按钮图标弹出评论功能菜单
 		function showCommentMenu(v) {
 			var a = document.getElementById('div-comment-message' + v);
-			if(a.className.indexOf("mui-hidden")>-1){
+			if (a.className.indexOf("mui-hidden") > -1) {
 				a.classList.remove('mui-hidden');
-			}
-			else {
+			} else {
 				a.classList.add('mui-hidden');
 			}
-			
+
 		}
-		
+
 		//点击“V”弹出多个孩子的姓名列表菜单
 		var btn = document.getElementById("div_childname");
-		var li = document.getElementById('div_childnamelist') ;//获取li元素
-		btn.onclick=function(e){
+		var li = document.getElementById('div_childnamelist'); //获取li元素
+		btn.onclick = function(e) {
 			//alert("click");
-			if(li.className.indexOf("mui-hidden")>-1){
+			if (li.className.indexOf("mui-hidden") > -1) {
 				document.getElementById("div_childnamelist").classList.remove('mui-hidden');
-			}
-			else {
+			} else {
 				document.getElementById("div_childnamelist").classList.add('mui-hidden');
 			}
 		}
 
 		//播放视频
 		var div_video = document.getElementById("div_video");
-		div_video.onclick=function(e){
+		div_video.onclick = function(e) {
 			//alert("click88");
 			document.getElementById("videoID").play();
 		}
-		
+
 		//调用输入评论内容隐藏/显示弹出层
 		document.getElementById("btn_pinglun").addEventListener("tap", function() {
 			mui("#div_inputContent").popover('toggle');
 		})
-		
+
+		//弹出右侧下拉分享菜单
+		document.getElementById("pull1").addEventListener("tap", function() {
+			mui("#rightPopover1").popover('toggle');
+		})
+		document.getElementById("pull2").addEventListener("tap", function() {
+			mui("#rightPopover2").popover('toggle');
+		})
+		document.getElementById("pull3").addEventListener("tap", function() {
+			mui("#rightPopover3").popover('toggle');
+		})
+		document.getElementById("pull4").addEventListener("tap", function() {
+			mui("#rightPopover4").popover('toggle');
+		})
 	</script>
 
 </html>
