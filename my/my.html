@@ -203,7 +203,7 @@
 				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">通知</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+			<a id="div_plus" class="mui-tab-item mui-active" href="javascript:void(0)">
 				<div class="plus">
 					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
 				</div>
@@ -334,11 +334,38 @@
 		<!--页面主结构结束-->
 
 
+				<!--点击底部导航“+”后弹出的发布页面-->
+				<div id="div_postboard" class="container mui-hidden">
+					<div class="posttile">
+						<h2>发布</h2>
+					</div>
+					<div id='messageBar' class="post-bar">
+						<div id="More_content" class="post-tool-div">
+							<div class="div-post-icon">
+								<p>
+									<svg class="posticon" aria-hidden="true">
+										<use xlink:href="#icon-dongtai1"></use>
+									</svg>
+								</p>
+								<span>发动态</span>
+							</div>
+		
+							<div class="div-post-icon">
+								<p>
+									<svg class="posticon" aria-hidden="true">
+										<use xlink:href="#icon-shipinwenjian"></use>
+									</svg>
+								</p>
+								<span>拍摄</span>
+							</div>
+						</div>
+						<div id="closepost" class="closeIcon"><img src="../images/close.png" /></div>
+					</div>
+				</div>
 
 	</body>
 	<script src="../js/mui.min.js "></script>
 	<script src="../fonts/iconfont.js"></script>
-	<script src="../js/mui.view.js "></script>
 
 	<script>
 		mui.init();
@@ -346,6 +373,17 @@
 		mui('body').on('tap', 'a', function() {
 			document.location.href = this.href;
 		});
+		
+			//点击底部导航条的加号弹出应用菜单
+			document.getElementById("div_plus").addEventListener('tap', function() {
+				document.getElementById('div_postboard').classList.remove('mui-hidden');
+			});
+			//点击弹出应用菜单的"X"关闭当前窗口
+			var btn2 = document.getElementById("closepost");
+			btn2.onclick = function(e) {
+				document.getElementById('div_postboard').classList.add('mui-hidden');
+			}
+		
 	</script>
 
 </html>

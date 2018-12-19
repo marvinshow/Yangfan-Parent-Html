@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<button id="submit" class="mui-btn mui-btn-green mui-btn-link mui-pull-right">发布</button>
+			<h1 class="mui-center mui-title">发动态</h1>
+		</div>
+		<div class="mui-content">
+			<div class="mui-content-padded1">
+				<ul class="mui-table-view">
+					<div style="margin: 0px auto;">
+						<p><textarea id="messageInput" rows="5" placeholder="这一刻的想法…" style="border: 0px;"></textarea></p>
+						<a href="#picture">
+							<div class="post-upload">
+								<svg class="posticon" aria-hidden="true" style="width: 2em; height: 2em;">
+									<use xlink:href="#icon-shangchuan"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+					<li class="mui-table-view-cell" style="margin-left: 3px;line-height: 35px;">
+					</li>
+					<li class="mui-table-view-cell" style="margin-left: 3px;line-height: 35px;">
+						<span class="mui-icon-extra mui-icon-extra-share"></span>
+						分享给同班级小朋友查看
+						<div class="mui-switch mui-switch-green mui-switch-mini mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍照或录像</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">选取现有的</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../fonts/iconfont.js"></script>
+	<script>
+		(function($, doc) {
+				$.init();
+	</script>
+
+</html>

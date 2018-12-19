@@ -174,7 +174,7 @@ ul li span:after {
 	display: inline-block;
 	color: #C7C7CC;
 	font-size: 25px;
-}
+} 
 /*修改选中颜色*/
 .mui-icon.mui-active {
     color: #ff6a4c;

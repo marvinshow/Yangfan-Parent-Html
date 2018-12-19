@@ -14,6 +14,20 @@ body {
 	color: #1AAD19;
 }
 
+/*底部导航条的加号样式*/
+.plus {
+	position: absolute;
+	overflow: hidden;
+	z-index: 9999;
+	width: 50px;
+	height: 50px;
+	background: #f7f7f7;
+	margin-top: -40px;
+	margin-left: 20px;
+	border: 2px solid #f7f7f7;
+	border-radius: 50%;
+}
+
 /*阿里巴巴图标尺寸*/
 .icon {
 	width: 1.5em;
@@ -29,6 +43,22 @@ body {
 
 .mui-plus .mui-bar-nav~.mui-content {
 	padding: 0;
+}
+.mui-bar .mui-btn-link {
+    font-size: 16px;
+    line-height: 44px;
+    top: 0;
+    padding: 0;
+    color: #1AAD19;
+    border: 0;
+}
+.mui-bar .mui-btn-greycolor {
+    font-size: 16px;
+    line-height: 44px;
+    top: 0;
+    padding: 0;
+    color: #BBBBBB;
+    border: 0;
 }
 
 /*hm开头的表示仅为 Hello MUI示例定义*/
@@ -257,7 +287,10 @@ p img {
 
 .mui-index-top {
 	height: 250px;
-	background-image: url(../images/cbd.jpg)
+	background-image: url(../images/default_bg.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100%
 }
 
 .mui-index-top-title {
@@ -557,8 +590,6 @@ p img {
 
 }
 
-
-
 .mui-input-row label {
 	font-family: '黑体', Helvetica, sans-serif;
 	line-height: 1.1;
@@ -567,16 +598,92 @@ p img {
 	padding: 11px 15px;
 }
 
-/*底部导航条的加号样式*/
-.plus {
-	position: absolute;
+/*点击评论按钮后弹出评论的样式*/
+.inputContent {
+	position: fixed;
 	overflow: hidden;
 	z-index: 9999;
-	width: 50px;
-	height: 50px;
-	background: #f7f7f7;
-	margin-top: -40px;
+	height: 220px;
+	width: 100%;
+	background: #fff;
+}
+.inputContent textarea {
+	width: 100%;height: auto;border: 0px;font-family: '黑体';
+}
+
+/*点击底部加号后弹出应用菜单的样式*/
+.container {
+	position: fixed;
+	overflow: hidden;
+	z-index: 9999;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+}
+
+.posticon {
+	width: 4em;
+	height: 4em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+.post-bar {
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: auto;
+	padding: 5px 5px 0px 5px;
+	border-bottom: 0;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 1px #C7C7CC;
+	box-shadow: 0 0 1px #C7C7CC;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	text-align: center;
+}
+
+.post-tool-div {
+	width: 100%;
+	height: 150px;
+	padding: 5px 0px;
+}
+
+
+.div-post-icon {
+	text-align: center;
+	float: left;
+	background: #FFF;
+	margin-left: 10px;
+	margin-right: 40px;
+}
+
+.post-icon span {
+	font-size: 15px;
+	text-align: center;
+}
+.posttile{
+	margin:100px auto; 
+	width:400px; 
+	height:100px; 
+	text-align: center;
+}
+.closeIcon{
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+/*发布内容页面的上传按钮样式*/
+.post-upload {
+	width:90px;
+	height:90px;
 	margin-left: 20px;
-	border: 2px solid #f7f7f7;
-	border-radius: 50%;
+	margin-bottom:20px;
+	background: #EEEEEE;
+	padding: 10px 10px 10px 10px; 
+	text-align: center;
+	line-height: 90px;
 }

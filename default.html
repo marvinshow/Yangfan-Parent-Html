@@ -33,7 +33,7 @@
 				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">通知</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+			<a id="div_plus" class="mui-tab-item mui-active" href="javascript:void(0)">
 				<div class="plus">
 					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
 				</div>
@@ -48,7 +48,19 @@
 			</a>
 		</nav>
 
-		<div class="mui-content">
+		<div class="mui-content" style="position: absolute;">
+			<!--隐藏的内容输出框-->
+			<div id="div_inputContent" class="inputContent mui-popover">
+				<p><textarea id="messageInput" rows="5" placeholder="请输入评论内容"></textarea></p>
+				<p style="text-align: right;">
+					<button type="button" class="mui-btn" style="margin-right: 20px;width: 70px;">取消</button>
+					<button type="button" class="mui-btn mui-btn-green" style="margin-right: 20px;width: 70px;">发送</button>
+				</p>
+			</div>
+			
+			<!--如果用户上传自定义背景图时，则改变此处的背景图
+			<div class="mui-index-top" style="background-image: url(images/cbd.jpg);background-repeat: no-repeat;background-position: 50%;background-size: 100%">
+			-->
 			<div class="mui-index-top">
 				<div class="mui-index-top-title">
 					<div class="borderImage"><img style="width: 80px;height: 80px;" src="images/girl_b.png"></div>
@@ -109,7 +121,7 @@
 							<div class="hb-comment-message mui-hidden" id="div-comment-message1">
 								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
 								<span class="splitline">|</span>
-								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span id="btn_pinglun" class="hb-comment-message-text">评论</span>
 								<span class="splitline">|</span>
 								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
 							</div>
@@ -261,18 +273,59 @@
 			</div>
 		</div>
 
+		<!--点击底部导航“+”后弹出的发布页面-->
+		<div id="div_postboard" class="container mui-hidden">
+			<div class="posttile">
+				<h2>发布</h2>
+			</div>
+			<div id='messageBar' class="post-bar">
+				<div id="More_content" class="post-tool-div">
+					<a href="my/post.html">
+					<div class="div-post-icon">
+						<p>
+							<svg class="posticon" aria-hidden="true">
+								<use xlink:href="#icon-dongtai1"></use>
+							</svg>
+						</p>
+						<span style="color: #000;">发动态</span>
+					</div>
+					</a>
+
+					<a href="my/post.html">
+					<div class="div-post-icon">
+						<p>
+							<svg class="posticon" aria-hidden="true">
+								<use xlink:href="#icon-shipinwenjian"></use>
+							</svg>
+						</p>
+						<span style="color: #000;">拍摄</span>
+					</div>
+					</a>
+				</div>
+				<div id="closepost" class="closeIcon"><img src="images/close.png" /></div>
+			</div>
+		</div>
+
 	</body>
 	<script src="js/mui.min.js"></script>
+	<script src="fonts/iconfont.js"></script>
 	<script src="js/mui.zoom.js"></script>
 	<script src="js/mui.previewimage.js"></script>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script>
 		mui('body').on('tap','a',function(){document.location.href=this.href;});
 		mui.previewImage();
+		
+		//点击底部导航条的加号弹出应用菜单
+		document.getElementById("div_plus").addEventListener('tap', function() {
+			document.getElementById('div_postboard').classList.remove('mui-hidden');
+		});
+		//点击弹出应用菜单的"X"关闭当前窗口
+		var btn2 = document.getElementById("closepost");
+		btn2.onclick = function(e) {
+			document.getElementById('div_postboard').classList.add('mui-hidden');
+		}
 
-		// 		document.getElementById("toastBtn").addEventListener('tap', function() {
-		// 			mui.toast('欢迎体验Hello MUI');
-		// 		});
 
 		//点击“评论”按钮图标弹出评论功能菜单
 		function showCommentMenu(v) {
@@ -299,13 +352,18 @@
 			}
 		}
 
-
 		//播放视频
 		var div_video = document.getElementById("div_video");
 		div_video.onclick=function(e){
 			//alert("click88");
 			document.getElementById("videoID").play();
 		}
+		
+		//调用输入评论内容隐藏/显示弹出层
+		document.getElementById("btn_pinglun").addEventListener("tap", function() {
+			mui("#div_inputContent").popover('toggle');
+		})
+		
 	</script>
 
 </html>
