@@ -293,6 +293,24 @@ p img {
 	background-size: 100%
 }
 
+/*认领功能样式*/
+.zhezhao {
+	position:relative; 
+	width:100%; 
+	height:100%;
+	top :0px;
+	background-color:#000;
+	opacity:0.3;
+	text-align:center
+}
+.selectImg {
+	position: absolute;
+	margin: 15px 5px 0 0;
+	top:0px;
+	right: 0px;
+	width: 30px;
+}
+
 .mui-index-top-title {
 	float: right;
 	margin-right: 10px;
@@ -400,6 +418,7 @@ p img {
 .hb-comment-message-text {
 	margin-left: 10px;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 /*评论按钮*/
@@ -686,4 +705,10 @@ p img {
 	padding: 10px 10px 10px 10px; 
 	text-align: center;
 	line-height: 90px;
+}
+
+.pullimg {
+	width: 26px; 
+	height: 16px;
+	cursor: pointer;
 }

@@ -58,7 +58,7 @@
 
 		<div class="mui-content" style="position: absolute;">
 			<!--隐藏的内容输出框-->
-			<div id="div_inputContent" class="inputContent mui-popover">
+			<div id="div_inputContent" class="inputContent mui-popover" style="height: 220px;">
 				<p><textarea id="messageInput" rows="5" placeholder="请输入评论内容"></textarea></p>
 				<p style="text-align: right;">
 					<button type="button" class="mui-btn" style="margin-right: 20px;width: 70px;">取消</button>
@@ -129,7 +129,10 @@
 						<div class="mui-media-content">布置作业</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-4">
-								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
+								<div>
+									<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
+									<img class="selectImg" src="images/select.png">
+								</div>
 							</li>
 							<li class="mui-table-view-cell mui-media mui-col-xs-4">
 								<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="1">
@@ -183,7 +186,8 @@
 						<div>
 							<span class="mui-media-author" style="float: left;">李婷婷(保育员)</span>
 							<span style="float: right;">
-								<img id="pull2" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<button id="btn_renling2" type="button" class="mui-btn mui-btn-green mui-btn-outlined mui-hidden">认领</button>
+								<img id="pull2" class="pullimg" src="images/pull.png" />
 								<div id="rightPopover2" class="rightPopover mui-popover">
 									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
 									<div class="mui-scroll-wrapper">
@@ -199,20 +203,34 @@
 								</div>
 							</span>
 						</div>
+
 						<div class="mui-media-content">今天孩子玩得真开心</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-6">
-								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+								<div>
+									<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1001" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1001)">
+								</div>
 							</li>
 							<li class="mui-table-view-cell mui-media mui-col-xs-6">
-								<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1002" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1002)">
+								</div>
 							</li>
 							<li class="mui-table-view-cell mui-media mui-col-xs-6">
-								<img class="mui-media-object" src="images/cbd.jpg" data-preview-src="" data-preview-group="2">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1003" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1003)">
+								</div>
 							</li>
 							<li class="mui-table-view-cell mui-media mui-col-xs-6">
-								<img class="mui-media-object" src="images/yuantiao.jpg" data-preview-src="" data-preview-group="2">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1004" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1004)">
+								</div>
 							</li>
+							
 						</ul>
 						<div class="hb-media-tag">
 							<div class="hb-tag-info">
@@ -225,7 +243,7 @@
 								<span class="splitline">|</span>
 								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
 								<span class="splitline">|</span>
-								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span id="span_renling" class="hb-comment-message-text">认领</span>
 							</div>
 							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(2)"></div>
 						</div>
@@ -315,7 +333,7 @@
 						<div class="mui-media-content">看看我们的小小发明家</div>
 						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
 							<li class="mui-table-view-cell mui-media mui-col-xs-12">
-								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="4">
 							</li>
 						</ul>
 						<div class="hb-media-tag">
@@ -446,6 +464,29 @@
 		document.getElementById("btn_pinglun").addEventListener("tap", function() {
 			mui("#div_inputContent").popover('toggle');
 		})
+		//点击认领功能后图片改为待选择状态
+		document.getElementById("span_renling").addEventListener("tap", function() {
+			//alert("点击认领")
+			for(i=0;i<document.getElementsByName("SelectImgGroup1").length;i++)
+                 {
+                 document.getElementsByName("SelectImgGroup1")[i].classList.remove('mui-hidden'); //显示该组所有的待选框
+                }
+			document.getElementById("btn_renling2").classList.remove('mui-hidden'); //显示认领按钮
+			document.getElementById("pull2").classList.add('mui-hidden'); //隐藏下拉箭头
+
+		})
+		function changeSrc(v){
+			//alert("改变"+v+"的图片地址");
+			var id_selectImg = document.getElementById("id_selectImg"+v);
+			var str =id_selectImg.src;
+			if(str.indexOf("selected.png")>-1){
+				id_selectImg.src="images/select.png";
+			}
+			else {
+				id_selectImg.src="images/selected.png";
+			}			
+		}
+
 
 		//弹出右侧下拉分享菜单
 		document.getElementById("pull1").addEventListener("tap", function() {
