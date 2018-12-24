@@ -23,7 +23,7 @@ body {
 	height: 50px;
 	background: #f7f7f7;
 	margin-top: -40px;
-	margin-left: 20px;
+	margin-left: 25px;
 	border: 2px solid #f7f7f7;
 	border-radius: 50%;
 }
@@ -711,4 +711,8 @@ p img {
 	width: 26px; 
 	height: 16px;
 	cursor: pointer;
+}
+
+.attData span {
+	font-size: 12px;
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/calendar_base.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/showcase.css" />
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">请假</button>
+			<h1 class="mui-center mui-title">考勤记录</h1>
+		</div>
+		<div class="mui-content">
+
+			<div class="em-journal-title">
+				<div class="em-per-block pre">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span></span>
+				</div>
+				<div class="em-per-block mid">
+					<span id="curDate">...</span>
+				</div>
+				<div class="em-per-block next">
+					<span></span>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+
+			<!--日历容器-->
+			<div id="calendar">
+
+			</div>
+
+			<div id="div_tip">
+
+			</div>
+
+			<div class="attData">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body hb-message-info">
+							<p>当月考勤记录</p>
+						</div>
+						<div class="mui-media-body hb-message-info" style="width: 100%;">
+							<span style="color: #1AAD19;margin-right: 4rem;">出勤17天</span>
+							<span style="color: #FF0000;margin-right: 4rem;">病假0天</span>
+							<span style="color: #EC971F;">事假2天</span>
+						</div>
+					</li>
+				
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body hb-message-info">
+							<p>当月请假记录</p>
+						</div>
+						<div class="mui-media-body" style="width: 100%;">
+							<span>2018-12-22</span><br>
+							<span style="">于涵（事假6天）：12月24日、12月25日、12月26日、12月27日、12月28日、12月29日</span><br>
+							<span style="">请假理由：出去旅游</span>
+							<br><br>
+							
+							<span>2018-12-21</span><br>
+							<span style="">于涵（病假2天）：12月22日、12月23日</span><br>
+							<span style="">请假事由：咳嗽引起嗓子发炎</span>
+							<br><br>
+							
+							<span>2018-12-19</span><br>
+							<span style="">于涵（病假1天）：12月19日</span><br>
+							<span style="">请假事由：感冒</span>
+
+
+						</div>
+					</li>
+				
+				</u>
+			</div>
+		</div>
+
+	</body>
+	<script>var selectedDate=[{"date":"2018-12-11"},{"date":"2018-12-12"},{"date":"2018-12-13"}];</script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/calendar_base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/calendar_showcase.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

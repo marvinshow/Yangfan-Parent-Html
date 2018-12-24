@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/calendar_base.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/showcase.css" />
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-center mui-title">营养食谱</h1>
+		</div>
+		<div class="mui-content">
+
+			<div class="em-journal-title">
+				<div class="em-per-block pre">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span>上一周</span>
+				</div>
+				<div class="em-per-block mid">
+					<span id="curDate">本周</span>
+				</div>
+				<div class="em-per-block next">
+					<span>下一周</span>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+
+			<!--日历容器-->
+			<div id="calendar">
+
+			</div>
+
+			<div id="div_tip">
+
+			</div>
+
+			<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="../images/meal1.jpg">
+									<div class="mui-media-body">
+										早餐
+										<p class='mui-ellipsis'>肉包子 稀饭 黄金油条 豆浆</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="../images/meal2.jpg">
+									<div class="mui-media-body">
+										早点
+										<p class='mui-ellipsis'>香蕉 牛奶</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="../images/meal3.jpg">
+									<div class="mui-media-body">
+										午餐
+										<p class='mui-ellipsis'>蒜香排骨 土豆炖牛腩 西芹炒肉丝 珍珠白玉汤 五彩米饭</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="../images/meal4.jpg">
+									<div class="mui-media-body">
+										午点
+										<p class='mui-ellipsis'>蛋糕 酸奶</p>
+									</div>
+								</a>
+							</li>
+			
+						</ul>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/calendar_base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/calendar_showcase.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
